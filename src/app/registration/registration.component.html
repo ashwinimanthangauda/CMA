@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <h1></h1>
+    
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+   
+
+</head>
+<body>
+    <!-- Form -->
+<div align=middle class="box-outer"  style="background-color: cornsilk; "    >
+    <form name="registrationForm" #registrationForm="ngForm" method="post" action="" (ngSubmit)="onSubmit(registrationForm)" autocomplete="off">
+        <h2 class="heading">Create A Client</h2>
+        <p>Please fill the below form to create a Client</p> 
+
+        <label>First Name</label><br> 
+        <input type="text" name="name" [(ngModel)]="name" class="input-control" placeholder="Your first name"><br><br> 
+
+        <label>Email</label><br> 
+        <input type="text" name="email" [(ngModel)]="email" class="input-control" placeholder="Your email Email"><br><br> 
+          
+        <label> Address: </label><br>          
+        <input type="text" name="address" [(ngModel)]="address" class="input-control" placeholder="Your email Address"> <br> <br>  
+            
+        <label>Password: </label><br>  
+        <input type="Password" name="pass" [(ngModel)]="pass" class="input-control" placeholder="Your email Password"> <br><br>  
+
+        <label>Re-type password</label><br> 
+        <input type="password" name="repass" [(ngModel)]="repass" class="input-control" placeholder="Your email Repassword"><br><br> 
+
+        <input type="submit" name="submit" class="button" value="submit" ><br>
+    </form>
+</div>
+<!-- Form End -->
+</body>
+</html>

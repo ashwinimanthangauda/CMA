@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <h1></h1>
+    
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Form</title>
+</head>
+<body>
+    <!-- Form -->
+<div align=middle class="box-outer" style="background-color: cornsilk; "    >
+    <form #meetingForm="ngForm" method="post" action="" autocomplete="off">
+        <h2 class="heading">Schedule meeting</h2>
+        <p>Please fill the below form to schedule a meeting</p> 
+
+        <label>Client Name</label><br> 
+        <input type="text" name="client" [(ngModel)]="name" class="input-control" placeholder="Client Name"><br><br> 
+
+        <label>Meeting Topic</label><br> 
+        <input type="text" name="topic" [(ngModel)]="topic" class="input-control" placeholder="Meeting Topic"><br><br> 
+
+        <label>Number Of People</label><br> 
+        <input type="text" name="noofpeople" [(ngModel)]="numberofpeople" class="input-control" placeholder="Number Of People"><br><br> 
+          
+        <label> Start Date: </label><br>          
+        <input type="datetime-local" name="startdate" [(ngModel)]="startdate"  class="input-control" placeholder="Start Date & Time"> <br> <br>  
+            
+        <input (click)="addMeeting()" type="submit" name="submit" class="button" value="submit"><br>
+    </form>
+</div>
+<!-- Form End -->
+</body>
+</html>
